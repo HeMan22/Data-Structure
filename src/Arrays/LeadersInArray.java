@@ -31,6 +31,7 @@ public class LeadersInArray {
 			arr[i] = sc.nextInt();
 		
 		printingLeaders(arr,len);
+		sc.close();
 	}
 
 	private static void printingLeaders(int[] arr, int len) {
