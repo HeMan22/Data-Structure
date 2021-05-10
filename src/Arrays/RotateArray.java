@@ -35,6 +35,8 @@ public class RotateArray {
 
 		// Printing Array
 		printArray(arr, len);
+		
+		sc.close();
 	}
 
 	private static void printArray(int[] arr, int len) {
