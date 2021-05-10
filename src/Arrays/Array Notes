@@ -1,0 +1,35 @@
+Arrays:
+
+Advantages:
+			1) Random Access to elements
+			2) Cache Friendliness
+
+Disadvantages:
+			1) Wastage of Space
+		ArrayList<Integer> al = new ArrayList<>(); 
+		Here also some predefined memory of space is allocated firstly,
+		And as soon as that memory is filled extra space is allocated automatically.
+		
+		
+Time Complexity:
+
+3 operations are there 1) Insertion 2) Deletion 3) Search
+
+1) In the end
+	Insertion and Deletion have O(1) time complexity
+
+2) In the middle
+	Insertion and Deletion have O(n) time complexity
+	
+	
+	
+	
+	
+Time Complexity of Insertion in ArrayList/Vector
+
+Suppose we are having O(1) time complexity for insertion till the predefined memory is filled
+then O(n) for copying the previous elements to the next array of bigger size...... So the average
+Time Complexity is O(1) only.
+
+(O(1) + O(1) + O(1) + O(1) ..... + O(n))/ n+1 = O(1)
+
