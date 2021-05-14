@@ -37,6 +37,7 @@ public class FindingSubArray {
 				curr_sum += arr[i];
 		}
 
+		//checking sum of last window explicitly
 		return (curr_sum == sum);
 	}
 
