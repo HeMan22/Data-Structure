@@ -1,4 +1,7 @@
 /*
+ * Find sub array with given sum
+ * This following approach is for non-negative array. it can't work when array have negative elements
+ * 
  *  I/P:
  *  	arr[] = {1, 4, 20, 3, 10, 5}
  *  Sum: 33
