@@ -17,7 +17,7 @@ public class EquilibriumPoint {
 
 	public static void main(String[] args) {
 
-        int arr[] = {3, 4, 8, -9, 20, 6};
+        int arr[] = {2, -2, 4};
         int len = arr.length;
 
         System.out.println(equilibriumPoint(arr,len));
