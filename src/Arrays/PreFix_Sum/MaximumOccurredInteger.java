@@ -13,11 +13,11 @@ public class MaximumOccurredInteger {
 	// Return the maximum occurred element in all ranges. 
 	static int maximumOccuredElement(int[] L, int[] R, int n) 
 	{ 
-		// Initalising all element of array to 0. 
+		// Initialising all element of array to 0. 
 		int[] arr = new int[MAX]; 
 
 		// Adding +1 at Li index and 
-		// substracting 1 at Ri index. 
+		// Subtracting 1 at Ri index. 
 		int maxi=-1; 
 		for (int i = 0; i < n; i++) { 
 			arr[L[i]] += 1; 
