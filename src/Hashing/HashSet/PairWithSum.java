@@ -12,6 +12,15 @@ import java.util.HashSet;
  * 		True
  * 
  * Explanation: 5 + 11 = 16
+ * 
+ * 
+ * I/P:
+ * 		arr[] = new int[]{3, 8, 4, 7, 6, 1};
+ *      x = 14;
+ * O/P:
+ * 		True
+ * 
+ * Explanation: 8 + 6 = 14
  */
 
 public class PairWithSum {
