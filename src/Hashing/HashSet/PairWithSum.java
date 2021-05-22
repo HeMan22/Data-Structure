@@ -20,7 +20,7 @@ import java.util.HashSet;
  * O/P:
  * 		True
  * 
- * Explanation: 8 + 6 = 14
+ * Explanation: 8 + 6 = 14*--
  */
 
 public class PairWithSum {
