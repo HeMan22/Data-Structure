@@ -1,38 +1,43 @@
-package Hashing.HashMap;
-
 /*
-
+Union of the two arrays can be defined as the set containing distinct elements from both the arrays.
+If there are repetitions, then only one occurrence of element should be printed in union.
 Example 1:
 
 Input:
-n = 5, m = 3
-a[] = {89, 24, 75, 11, 23}
-b[] = {89, 2, 4}
+5 3
+1 2 3 4 5
+1 2 3
 
-Output: 1
+Output: 
+5
 
 Explanation: 
-89 is the only element 
-in the intersection of two arrays.
+1, 2, 3, 4 and 5 are the
+elements which comes in the union set
+of both arrays. So count is 5.
 Example 2:
 
 Input:
-n = 6, m = 5
-a[] = {1, 2, 3, 4, 5, 6}
-b[] = {3, 4, 5, 6, 7} 
+6 2 
+85 25 1 32 54 6
+85 2 
 
-Output: 4
+Output: 
+7
 
 Explanation: 
-3 4 5 and 6 are the elements 
-in the intersection of two arrays.
+85, 25, 1, 32, 54, 6, and
+2 are the elements which comes in the
+union set of both arrays. So count is 7.
 
- */
+*/
 
-import java.util.HashMap;
+package Hashing.HashSet;
+
+import java.util.HashSet;
 import java.util.Scanner;
 
-public class IntersectionOf2Array {
+public class UnionOf2Array {
 
 	public static void main(String[] args) {
 
@@ -69,32 +74,24 @@ public class IntersectionOf2Array {
 
 		// calling NumberofElementsInIntersection method
 		// and printing the result
-		System.out.println(NumberofElementsInIntersection(a, b, n, m));
+		System.out.println(NumberofElementsInUnion(a, b, n, m));
 		// }
-		
 		sc.close();
 	}
 
 	// Function to return the count of the number of elements in
 	// the intersection of two arrays.
-	private static int NumberofElementsInIntersection(int[] a, int[] b, int n, int m) {
+	private static int NumberofElementsInUnion(int[] a, int[] b, int n, int m) {
 
-		HashMap<Integer, Integer> hm = new HashMap<>();
+		HashSet<Integer> union = new HashSet<>();
 
 		for (int i = 0; i < n; i++) {
-			if (hm.get(a[i]) == null)
-				hm.put(a[i], 1);
+			union.add(a[i]);
 		}
-		int c = 0;
-		for (int i = 0; i < m; i++) {
-			if (hm.get(b[i]) != null) {
-				c++;
-				hm.remove(b[i]);
-			}
-		}
+		for (int i = 0; i < m; i++)
+			union.add(b[i]);
 
-		return c;
-
+		return union.size();
 	}
 
 }

@@ -16,6 +16,8 @@ public class CountNonRepeatedElement {
 			arr[i]=sc.nextInt();
 		
 		countNonRepeated(arr,size);
+		
+		sc.close();
 	}
 
 	private static void countNonRepeated(int[] arr, int size) {
