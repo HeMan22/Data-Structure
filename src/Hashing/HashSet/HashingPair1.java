@@ -42,7 +42,7 @@ public class HashingPair1 {
         //taking input using class Scanner
         Scanner sc = new Scanner(System.in);
         
-        //taking count of testcases
+        //taking count of test cases
         int testcases = sc.nextInt();
         while(testcases-- > 0)
         {
@@ -64,8 +64,12 @@ public class HashingPair1 {
             //and printing the result
             System.out.println(sumExists(arr, N, sum));
         }
+        sc.close();
     }
 
+    // This below solution can also be used for question
+    // where array of Non-distinct elements would be given.
+    
 	private static int sumExists(int[] arr, int n, int sum) {
 		
 		HashSet<Integer> hs = new HashSet<>();
