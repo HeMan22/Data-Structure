@@ -1,4 +1,4 @@
-package Hashing.HashMap;
+package Hashing;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -34,19 +34,21 @@ public class NumberContaining123 {
 				System.out.print(-1);
 			System.out.println();
 		}
-
+		sc.close();
 	}
 
 	public static void findAll() {
-	    Set< Integer > set = new HashSet<>(Set.of(1, 2, 3));
-	    for (int i = 1; i <= 1000000; ++i) {
-	        int n = i;
-	        while (n > 0) {
-	            if (!set.contains(n % 10)) break;
-	            n /= 10;
-	        }
-	        if (n == 0) mp.put(i, 1);
-	    }
+		Set<Integer> set = new HashSet<>(Set.of(1, 2, 3));
+		for (int i = 1; i <= 1000000; ++i) {
+			int n = i;
+			while (n > 0) {
+				if (!set.contains(n % 10))
+					break;
+				n /= 10;
+			}
+			if (n == 0)
+				mp.put(i, 1);
+		}
 	}
 
 }
