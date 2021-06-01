@@ -21,6 +21,7 @@ package Hashing.HashMap;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class HashMapTraversal {
 
@@ -38,6 +39,7 @@ public class HashMapTraversal {
 		System.out.println("Created hashmap is" + hm);
 
 		usingAnIterator(hm);
+		usingForEachLoop(hm);
 	}
 
 	// Java program to traverse through
@@ -46,17 +48,38 @@ public class HashMapTraversal {
 	private static void usingAnIterator(HashMap<String, Integer> hm) {
 
 		// Getting An Iterator
-		Iterator hmIterator = hm.entrySet().iterator();
+		Iterator<Entry<String, Integer>> hmIterator = hm.entrySet().iterator();
 
 		// Iterate through the HashMap
 		// and add some bonus marks for every student
 		System.out.println("HashMap after adding bonus marks:");
 
 		while (hmIterator.hasNext()) {
-			Map.Entry mapElement = (Map.Entry) hmIterator.next();
+			Map.Entry<String, Integer> mapElement = (Map.Entry<String, Integer>) hmIterator.next();
 			int marks = (int) mapElement.getValue() + 10;
 
 			System.out.println(mapElement.getKey() + " " + marks);
 		}
 	}
+
+	// Java program for traversing
+	// through a HashMap using for-each loop
+
+	private static void usingForEachLoop(HashMap<String, Integer> hm) {
+		
+		// Using for-each loop
+		System.out.println("Traversing Map using For Each Loop");
+		
+		for(Map.Entry<String, Integer> mapElement : hm.entrySet()) {
+			String key = mapElement.getKey();
+			
+			// Add some bonus numbers
+            // to all the keys and print it
+			int value = mapElement.getValue()+10;
+			
+			System.out.println(key+ " : "+ value);
+		}	
+		
+	}
+
 }
