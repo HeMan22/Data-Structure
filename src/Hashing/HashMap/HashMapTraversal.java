@@ -16,6 +16,7 @@ This program contains different ways of traversing through a HashMap, which are 
 3)	Using forEach() method: forEach() is a method of HashMap which is introduced in java 8. 
 	It is used to iterate through the HashMap and also reduces the number of lines of code.
 */
+
 package Hashing.HashMap;
 
 import java.util.HashMap;
@@ -40,6 +41,7 @@ public class HashMapTraversal {
 
 		usingAnIterator(hm);
 		usingForEachLoop(hm);
+		usingForEachMethod(hm);
 	}
 
 	// Java program to traverse through
@@ -66,20 +68,33 @@ public class HashMapTraversal {
 	// through a HashMap using for-each loop
 
 	private static void usingForEachLoop(HashMap<String, Integer> hm) {
-		
+
 		// Using for-each loop
 		System.out.println("Traversing Map using For Each Loop");
-		
-		for(Map.Entry<String, Integer> mapElement : hm.entrySet()) {
+
+		for (Map.Entry<String, Integer> mapElement : hm.entrySet()) {
 			String key = mapElement.getKey();
-			
+
 			// Add some bonus numbers
-            // to all the keys and print it
-			int value = mapElement.getValue()+10;
-			
-			System.out.println(key+ " : "+ value);
-		}	
-		
+			// to all the keys and print it
+			int value = mapElement.getValue() + 10;
+
+			System.out.println(key + " : " + value);
+		}
+
+	}
+
+	// Java program for traversing
+	// through a HashMap using for-each loop
+
+	private static void usingForEachMethod(HashMap<String, Integer> hm) {
+
+		// Using forEach()
+		System.out.println("Traversing Map using ForEach() ");
+
+		// Using Hashmap.forEach()
+		hm.forEach((k, v) -> System.out.println(k + " : " + v));
+
 	}
 
 }
