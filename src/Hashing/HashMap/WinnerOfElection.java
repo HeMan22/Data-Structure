@@ -25,6 +25,7 @@ lexicographically smaller.
 package Hashing.HashMap;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class WinnerOfElection {
@@ -63,19 +64,38 @@ public class WinnerOfElection {
 		int max = 0;
 		String winner = "";
 
-		for (String temp : hm.keySet()) {
-			int val = hm.get(temp);
+		// Using keySet() to traverse HashMap
+		/*
+		 * for (String temp : hm.keySet()) { int val = hm.get(temp);
+		 * 
+		 * if (val > max) { winner = temp; max = val; } else if (val == max &&
+		 * winner.compareTo(temp) > 0) { winner = temp; max = val; } }
+		 */
 
-			if (val > max) {
-				winner = temp;
-				max = val;
-			} else if (val == max && winner.compareTo(temp) > 0) {
-				winner = temp;
-				max = val;
-			}
+		//Iterating through the map to find the name with highest frequency.
+
+
+		for (Map.Entry<String, Integer> entry : hm.entrySet()) {
+			
+			String key = entry.getKey();
+			int val = entry.getValue();
+			
+			//updating answer whenever we get any name with frequency 
+            //greater than frequency of name stored previously.
+			
+			if (val > max) 
+            { 
+                max = val; 
+                winner = key; 
+            } 
+            //if frequency of current name is same as the previously 
+            //stored name then we compare both names and store 
+            //lexicographically smaller name.
+            else if (val == max && winner.compareTo(key) > 0) 
+                winner = key; 
 		}
-		
-		String a[] = {winner, Integer.toString(max)};
+
+		String a[] = { winner, Integer.toString(max) };
 
 		return a;
 	}
