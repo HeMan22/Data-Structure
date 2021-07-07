@@ -28,7 +28,8 @@ public class TrappingRainWater {
 			// size of array
 			int n = Integer.parseInt(br.readLine().trim());
 			int arr[] = new int[n];
-			String inputLine[] = br.readLine().trim().split(" ");
+			String inputLine[] = br.readLine().trim().split(",");
+			
 
 			// adding elements to the array
 			for (int i = 0; i < n; i++) {
