@@ -86,28 +86,42 @@ public class LinkedListDeletion {
 	}
 
 	/*
-	 * Given a reference (pointer to pointer) to the
-	 * head of the list and a position, deletes the node at 
-	 * the given position
+	 * Given a reference (pointer to pointer) to the head of the list and a
+	 * position, deletes the node at the given position
 	 */
 	private void removeNode(int position) {
-		
-		Node current =head;
-		
+
+		Node current = head;
+
 		// If Link List is Empty
-		if(head==null) {
+		if (head == null) {
 			System.out.println("Nothing to Remove");
 			return;
 		}
-		
+
 		// If the head Node is to be removed
-		if(position==0) {
-			head=current.next;
+		if (position == 0) {
+			head = current.next;
 			return;
 		}
-		
+
 		// Finding the previous Node of the Node to be deleted
-		
+		int i = 0;
+		while (i < position - 1 && current != null) {
+			current = current.next;
+			i++;
+		}
+
+		// If position is more than Number of Nodes
+		if (current == null || current.next == null)
+			return;
+
+		// Node current.next is the node to be deleted
+		// Store pointer to the next of the node to be deleted
+
+		Node next = current.next.next;
+		current.next = next;
+
 	}
 
 	private void print() {
