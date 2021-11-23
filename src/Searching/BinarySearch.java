@@ -16,6 +16,19 @@ public class BinarySearch {
 		
 		//Number to be Searched
 		int x= sc.nextInt();
+		System.out.println(search(arr, 0, len-1, x));
+	}
+	
+	public static int search(int arr[],int l,int r,int x) {
+		
+		if(r>=l) {
+			int mid = l+(r-l)/2;
+			
+			if(arr[mid]==x)
+				return mid;
+		}
+	
+		return 0;
 	}
 
 }
