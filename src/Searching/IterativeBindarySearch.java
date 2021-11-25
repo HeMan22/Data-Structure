@@ -24,17 +24,20 @@ public class IterativeBindarySearch {
 			
 			int mid = l+(r-l)/2;
 			
+			// Check if x is present at mid 
 			if(arr[mid]==x)
 				return mid;
 			
+			// If x is smaller, ignore right half 
 			if(arr[mid] > x)
-			{
-				iterativeBinarySearch(arr, mid+1, r, x);
-			}
-			if(arr[mid]<x) {
-				iterativeBinarySearch(arr, l, mid-1, x);
-			}
+				r=mid-1;
+			
+			// If x greater, ignore left half 
+			if(arr[mid]<x)
+				l=mid+1;
 		}
+		
+	    // if we reach here, then element was not present
 		return -1;
 	}
 }
