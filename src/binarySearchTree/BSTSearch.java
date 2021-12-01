@@ -31,8 +31,15 @@ public class BSTSearch {
 		}
 		if(key <root.key)
 			root.left=insertRec(root.left,key);
+		if(key>root.key)
+			root.right=insertRec(root.right,key);
 
-
-		return null;
+		return root;
+	}
+	
+	boolean search(Node root, int key) {
+		if(root==null)
+			return false;
+		return false;
 	}
 }
