@@ -40,6 +40,13 @@ public class BSTSearch {
 	boolean search(Node root, int key) {
 		if(root==null)
 			return false;
+		else if(root.key==key)
+			return true;
+		else if(key>root.key)
+			search(root.right,key);
+		else if(key<root.key)
+			search(root.left,key);
+			
 		return false;
 	}
 }
